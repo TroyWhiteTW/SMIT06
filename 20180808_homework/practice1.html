@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>practice 1</title>
+</head>
+<script>
+    function countResult() {
+        let a = document.getElementById('a');
+        let b = document.getElementById('b');
+        let c = document.getElementById('c');
+        let oDiv = document.getElementById('div1');
+
+        let fA = parseFloat(a.value);
+        let fB = parseFloat(b.value) / 100;
+        let fC = parseFloat(c.value);
+
+        for (let i = 0; i < fC; i++) {
+            fA *= fB
+        }
+
+        oDiv.innerText = fA + '';
+    }
+
+    function checkInt(obj) {
+        obj.addEventListener('keyup', () => {
+            let re = /^\d+$/i;
+            if (!re.test(obj.value)) {
+                alert('請輸入正確的數字！');
+
+                let oDiv = document.getElementById('div1');
+                oDiv.innerText = '---';
+            } else {
+                countResult();
+            }
+        });
+    }
+
+    window.onload = () => {
+        let a = document.getElementById('a');
+        let b = document.getElementById('b');
+        let c = document.getElementById('c');
+
+        checkInt(a);
+        checkInt(b);
+        checkInt(c);
+
+        countResult();
+    };
+</script>
+<body>
+球從多高落下: <input id="a" value="100"/>
+<br/>
+反彈至原先高度的幾%: <input id="b" value="50">
+<br/>
+反彈幾次: <input id="c" value="5">
+<hr/>
+結果:
+<div id="div1"></div>
+</body>
+</html>

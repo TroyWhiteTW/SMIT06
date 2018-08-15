@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>practice 2</title>
+    <script>
+        window.onload = () => {
+            let oDiv = document.getElementById('div1');
+            let temp = '';
+            let result = '';
+
+            for (let i = 0; i < 5; i++) {
+                temp += '*';
+                result = result + temp + '<br/>';
+            }
+
+            oDiv.innerHTML = result;
+        };
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

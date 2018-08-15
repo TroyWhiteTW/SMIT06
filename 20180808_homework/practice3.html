@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>practice 3</title>
+    <script>
+        window.onload = () => {
+            function sortArr(index1, index2) {
+                let tmp = arr[index1];
+                arr[index1] = arr[index2];
+                arr[index2] = tmp;
+            }
+
+            let arr = [3, 0, 1, 8, 7, 2, 5, 4, 9, 6];
+
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        sortArr(j, j + 1);
+                    }
+                }
+            }
+
+            let oDiv = document.getElementById('div1');
+
+            oDiv.innerText = arr.toString();
+        };
+    </script>
+</head>
+<body>
+<div>原始數字：3, 0, 1, 8, 7, 2, 5, 4, 9, 6</div>
+<hr/>
+<div id="div1"></div>
+</body>
+</html>
