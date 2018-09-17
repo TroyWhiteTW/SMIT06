@@ -1,0 +1,31 @@
+已有MVC架構的基礎下，我會想要把資料整理好之後才傳給頁面去顯示，
+而顯示要盡量簡單、減少需要的判斷，最理想的狀況就是需要 render 資料的地方只用 foreach，
+除了保持簡潔外，也盡量不要讓太多程式碼影響 HTML 的內容，導致閱讀困難或維護不易。
+
+例如我在 Controller 已經透過 Ｍodel 從 DB 拿到資料的 ResultSet 並做好必要的資料處理後，
+pass ResultSet 到 View，我只會做 foreach 或簡單的 if 判斷去顯示資料，
+以 php 的內容來說會比較像這樣：
+<div>
+    <?php if ($isLogin): ?>
+        <?= $username ?>
+    <?php endif; ?>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td>time</td>
+            <td>IP</td>
+        </tr>
+
+        <?php foreach ($loginData as $k => $v): ?>
+            <tr>
+                <td><?= $v['loginTime'] ?></td>
+                <td><?= $v['loginIP'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+
+    </table>
+</div>
+
+當然如果能有樣版引擎可以使用的話是更好的。
