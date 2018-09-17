@@ -1,0 +1,6 @@
+C:\Users\troy\Downloads\20180824_homework\HomeworkC\HomeworkC\bin\Debug\HomeworkC.exe
+C:\Users\troy\Downloads\20180824_homework\HomeworkC\HomeworkC\bin\Debug\HomeworkC.pdb
+C:\Users\troy\Downloads\20180824_homework\HomeworkC\HomeworkC\obj\Debug\HomeworkC.csprojAssemblyReference.cache
+C:\Users\troy\Downloads\20180824_homework\HomeworkC\HomeworkC\obj\Debug\HomeworkC.csproj.CoreCompileInputs.cache
+C:\Users\troy\Downloads\20180824_homework\HomeworkC\HomeworkC\obj\Debug\HomeworkC.exe
+C:\Users\troy\Downloads\20180824_homework\HomeworkC\HomeworkC\obj\Debug\HomeworkC.pdb
